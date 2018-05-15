@@ -1,4 +1,5 @@
-<form action="/client/recipes" method="post">
+<!-- <form action="/client/recipes" method="post"> -->
+<%= form_tag "/client/recipes", method: :post do %>
   <div>
     Title: <input type="text" name="title">
   </div>
@@ -18,4 +19,5 @@
     Image URL: <input type="text" name="image_url">
   </div>
   <input type="submit" value="Create Recipe">
-</form>
+<!-- </form> -->
+<% end %>
