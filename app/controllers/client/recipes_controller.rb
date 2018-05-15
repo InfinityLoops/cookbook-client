@@ -11,6 +11,10 @@ class Client::RecipesController < ApplicationController
     @recipe = response.body
     render 'show.html.erb'
   end
+
+  def new
+    render 'new.html.erb'
+  end
 end
 
 
