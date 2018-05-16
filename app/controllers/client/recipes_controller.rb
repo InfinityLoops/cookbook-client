@@ -25,6 +25,7 @@ class Client::RecipesController < ApplicationController
                           )
 
     recipe = response.body
+    flash[:success] = "Successfully created recipe"
     redirect_to "/client/recipes/#{ recipe["id"] }"
   end
 
@@ -65,6 +66,7 @@ class Client::RecipesController < ApplicationController
     recipe_id = params[:id]
     response = Unirest.delete("http://localhost:3000/api/recipes/#{ recipe_id }")
     
+    flash[:success] = "Successfully destroyed recipe"
     redirect_to "/"
   end
 end
