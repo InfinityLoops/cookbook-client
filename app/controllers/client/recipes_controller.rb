@@ -20,7 +20,6 @@ class Client::RecipesController < ApplicationController
   def create
     client_params = {
                     title: params[:title],
-                    chef: params[:chef],
                     ingredients: params[:ingredients],
                     directions: params[:directions],
                     prep_time: params[:prep_time],
@@ -54,7 +53,6 @@ class Client::RecipesController < ApplicationController
   def update
     client_params = {
                     title: params[:title],
-                    chef: params[:chef],
                     ingredients: params[:ingredients],
                     directions: params[:directions],
                     prep_time: params[:prep_time],
